@@ -1,17 +1,20 @@
-function filterArray(numbers, value){
-  const array = [];
-    for (let i=0; i<numbers.length; i++){
-      if(numbers[i]> value){
-        array.push(numbers[i]);
-    }
-  }
-  return array;
-};
-  
-  
-  
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
+
+
+
+
+// Zadanie 3. Konstruktor ciągów
+
+// Napisz klasę StringBuilder, która przyjmuje jeden parametr initialValue — dowolny ciąg znaków, który jest zapisywany w prywatnej właściwości value obiektu, który jest tworzony.
+// Ogłoś następujące metody klasy:
+// getValue() — zwraca aktualną wartość prywatnej właściwości value.
+// padEnd(str) — otrzymuje parametr str (ciąg znaków) i dodaje go na końcu wartości prywatnej właściwości value obiektu, który wywołuje tę metodę.
+// padStart(str) — otrzymuje parametr str (ciąg znaków) i dodaje go na początku wartości prywatnej właściwości value obiektu, który wywołuje tę metodę.
+// padBoth(str) — otrzymuje parametr str (ciąg znaków) i dodaje go na początku i na końcu wartości prywatnej właściwości value obiektu, który wywołuje tę metodę.
